@@ -1,5 +1,5 @@
 import "./styles/App.scss";
-import Home from "./pages/home/home";
+import Home from "./pages/home/Home";
 import TweetPage from "./pages/tweetpage/TweetPage";
 import { DataProvider } from "./context/DataContext";
 import {
