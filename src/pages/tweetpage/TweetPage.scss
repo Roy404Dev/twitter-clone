@@ -1,0 +1,30 @@
+@use "/src/styles/colors";
+@use "/src/styles/variables";
+
+.tweetPage {
+  width: 598px;
+  border: 1px solid colors.$border-gray;
+  color: colors.$white-200;
+  .tweetPage__header {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: .5em;
+    span {
+      font-size: 1.25rem;
+      font-weight: variables.$fw-b;
+    } 
+    .back-arrow-button {
+      background-color: #000000;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: .5em;
+      border-radius: 50%;
+      &:hover {
+        background-color: colors.$grey-700;
+        transition: 200ms ease;
+      }
+    }
+  }
+}

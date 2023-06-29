@@ -1,0 +1,194 @@
+@use "/src/styles/colors";
+@use "/src/styles/variables";
+
+.tweet {
+  cursor: pointer;
+  .tweet__wrapper {
+    position: relative;
+    padding: 1em;
+    border-bottom: 1px solid colors.$border-gray;
+    .tweet__headerRow {
+      display: flex;
+      justify-content: space-between;
+      .tweet__profileMain {
+        display: flex;
+        gap: 1em;
+        .tweet__content {
+          .tweet__headerMain {
+            margin-bottom: 0.25em;
+          }
+        }
+      }
+      .tweet__ellipsisMenu {
+        display: flex;
+        margin: -0.5em -0.5em 0 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        transition: 250ms ease;
+        &:hover {
+          background-color: hsla(204, 88%, 53%, 0.2);
+          .ellipsisIcon {
+            color: colors.$textBlue;
+          }
+        }
+        .ellipsisIcon {
+          color: #71767b;
+        }
+        .ellipsisMenuBtn {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .tweet__name {
+    font-weight: variables.$fw-b;
+    color: colors.$white-200;
+  }
+  .tweet__username {
+    color: colors.$grey-400;
+    font-weight: variables.$fw-s;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+  }
+  .tweet__timestamp {
+    color: colors.$grey-400;
+    font-weight: variables.$fw-s;
+  }
+  .tweet__timestamp--circle {
+    color: colors.$grey-400;
+    font-size: 0.3rem;
+  }
+  .tweet__bottom {
+    display: flex;
+    margin-top: 0.5em;
+    gap: 2.5em;
+    padding-left: 3em;
+    .tweet__BottomItem {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      cursor: pointer;
+      span {
+        color: #71767b;
+        font-size: 0.8rem;
+        font-weight: variables.$fw-m;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        .icon {
+          color: #71767b;
+        }
+      }
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .tweet__comments:hover,
+    .tweet__views:hover,
+    .tweet__share:hover {
+      button {
+        background-color: hsla(204, 88%, 53%, 0.2);
+        .icon {
+          color: #1d9bf0;
+        }
+      }
+      span {
+        color: #1d9bf0;
+      }
+    }
+    .tweet__retweets:hover {
+      button {
+        background-color: hsla(160, 100%, 36%, 0.2);
+        .icon {
+          color: #00ba7c;
+        }
+      }
+      span {
+        color: #00ba7c;
+      }
+    }
+
+    .tweet__likes:hover {
+      button {
+        background-color: hsla(332, 95%, 54%, 0.2);
+        .icon {
+          color: #f91880;
+        }
+      }
+      span {
+        color: #f91880;
+      }
+    }
+  }
+  &:hover {
+    background-color: colors.$blackHover;
+  }
+}
+
+.tweet__primaryHeading {
+  .tweetImage {
+    border-radius: 0.8em;
+    margin-top: 1em;
+    max-height: 510px;
+    max-width: 100%;
+  }
+}
+
+.modalClickArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  cursor: default;
+}
+
+.menuModal {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8em;
+  position: absolute;
+  right: 0.8em;
+  top: 0.8em;
+  box-shadow: 0 0 10px 1px #2a2a2a;
+  border: 2px solid #2a2a2a;
+  background-color: #000000;
+  color: colors.$white-200;
+  z-index: 999;
+  .modal__item {
+    padding: 0.8em;
+    display: flex;
+    gap: 0.8em;
+    cursor: pointer;
+    span {
+      font-weight: variables.$fw-m;
+    }
+    &:hover {
+      background-color: #080808;
+    }
+    &:first-child {
+      border-radius: 0.8em 0.8em 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 0.8em 0.8em;
+    }
+  }
+}

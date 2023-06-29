@@ -1,0 +1,10 @@
+@use "/src/styles/colors";
+@use "/src/styles/variables";
+.tweet__profile {
+  .tweet__profileImage {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 200px;
+    max-width: inherit;
+  }
+}

@@ -1,0 +1,213 @@
+@use "/src/styles/colors";
+@use "/src/styles/variables";
+
+.CommentArea {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-color: hsla(207, 69%, 78%, 0.204);
+  .CommentInput {
+    max-height: 650px;
+    overflow: auto;
+    position: absolute;
+    width: 600px;
+    min-height: 345px;
+    top: 2.2em;
+    left: calc(26% + 4em);
+    border-radius: 1em;
+    z-index: 999;
+    background-color: hsl(0, 0%, 0%);
+
+    .CommentInput__topSection {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      width: 580px;
+      padding: 1em 0 0 1em;
+      border-radius: 1em;
+      z-index: 3;
+      .CommentInput__close {
+        position: relative;
+        top: -8px;
+        left: -8px;
+        width: 2.3em;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5em;
+        border-radius: 50%;
+        transition: 150ms ease-in;
+
+        &:focus {
+          border-radius: 100%;
+          background-color: colors.$grey-700;
+          outline: 3px solid white;
+        }
+        &:hover {
+          background-color: colors.$grey-700;
+        }
+      }
+    }
+    .CommentInput__main {
+      padding: 0 1em 0em 1em;
+      .tweet {
+        // margin-top: 1.2em;
+        margin-top: 4em;
+        .tweet__profileMain {
+          display: flex;
+          gap: 1em;
+          height: 3em;
+          cursor: auto;
+        }
+        &:hover {
+          background-color: inherit;
+        }
+        .tweet__content {
+          .tweet__primaryHeading {
+            padding-top: 0.2em;
+            span {
+              font-size: 0.9rem;
+              font-weight: variables.$fw-s;
+            }
+          }
+        }
+        .tweet__replaying {
+          display: flex;
+          gap: 2.2em;
+          .tweet__replaying-left {
+            .verticalBar {
+              width: 1.5px;
+              height: 45px;
+              background-color: colors.$grey-600;
+              margin-left: 1.2em;
+            }
+          }
+          .tweet__replaying-right {
+            display: flex;
+            align-items: center;
+            gap: 0.3em;
+            width: 100%;
+            .tweet__replayingText {
+              color: colors.$grey-400;
+              font-weight: variables.$fw-xs;
+              font-size: 0.9rem;
+            }
+            .replyingUsername {
+              color: colors.$textBlue;
+              cursor: pointer;
+            }
+          }
+        }
+        .commentForm {
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+          margin-top: 1em;
+          .commentForm-top {
+            display: flex;
+            gap: 1em;
+            width: 100%;
+            .replyInput {
+              padding-top: 0.5em;
+              background-color: #000000;
+              border: none;
+              color: white;
+              font-size: 1.2rem;
+              width: 100%;
+              resize: none;
+              overflow: hidden;
+              min-height: 3em;
+              &::placeholder {
+                font-size: 1.2rem;
+              }
+              .replyInput:focus {
+                outline: none;
+              }
+              &:focus {
+                outline: none;
+              }
+            }
+            .curUserAvatar {
+              height: 2.5em;
+              min-width: 2.5em;
+              border-radius: 200px;
+              cursor: default;
+            }
+          }
+          .replyImageContainer {
+            position: relative;
+            padding-left: 3.5em;
+            margin-top: 1.3em;
+            .replyImage {
+              border-radius: 1em;
+            }
+            .removeImageBtn {
+              position: absolute;
+              border: none;
+              background-color: transparent;
+              cursor: pointer;
+              height: 2.5em;
+              width: 2.5em;
+            }
+          }
+          .bottomInputs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 4em;
+            padding-bottom: 0.5em;
+            .inputImage {
+              border-radius: 5em;
+              padding: 0.6em;
+              &:hover {
+                background-color: colors.$attachment-btn-hover;
+              }
+              .uploadImgIcon {
+                color: colors.$btn-blue;
+                cursor: pointer;
+              }
+              #replyUploadImg {
+                display: none;
+              }
+            }
+            .bottomInputs-right {
+              display: flex;
+              align-items: center;
+              gap: 1em;
+              .replyBtn {
+                background-color: colors.$tweetBtn-Dark;
+                color: colors.$grey-text-400;
+                border-radius: 5em;
+                border: 0;
+                height: 2.2em;
+                padding: 0 1em;
+                cursor: pointer;
+                font-weight: variables.$fw-b;
+              }
+              .replyBtnActive {
+                background-color: colors.$btn-blue;
+                color: white;
+              }
+              .circleCharCount {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 3em;
+                width: 2em;
+                height: 2em;
+                border: 2px solid colors.$btn-blue;
+                .charCount {
+                  font-weight: variables.$fw-s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

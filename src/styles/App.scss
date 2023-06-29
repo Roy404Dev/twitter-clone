@@ -1,0 +1,16 @@
+@use 'reset';
+@use 'colors';
+@use 'layout/RootLayout';
+@use '../components/Sidebar/sidebar';
+@use '../pages/home/home';
+@use '../components/Trends/trends.scss';
+@use 'variables';
+@use '../components/Feed/feed.scss';
+@use '../components/Tweet/tweet.scss';
+@use '../components/Comment/CommentInput.scss';
+@use "../pages/tweetpage/TweetPage.scss";
+@use "../components/FullTweet/FullTweet.scss";
+body {
+  background: #000000;
+  font-family: 'Roboto', sans-serif;
+}

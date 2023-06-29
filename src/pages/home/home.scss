@@ -1,0 +1,6 @@
+@use "/src/styles/colors";
+@use "/src/components/header/header";
+.home {
+  color: white;
+  border: 1px solid colors.$border-gray;
+}

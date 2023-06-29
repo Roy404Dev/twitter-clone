@@ -1,0 +1,115 @@
+@use "/src/styles/colors";
+@use "/src/styles/variables";
+.Header {
+  border-bottom: 1px solid colors.$border-gray;
+  .Header__top {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.7em;
+    cursor: pointer;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    backdrop-filter: blur(18px);
+    .Header__Path {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0 0 0.7em 0.7em;
+    }
+    .header__Tabs {
+      .forYou-tab,
+      .following-tab {
+        width: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: colors.$grey-400;
+        padding: 1em 0;
+        font-size: 0.9rem;
+        font-weight: variables.$fw-m;
+      }
+      .forYou-tab:hover,
+      .following-tab:hover {
+        background-color: hsla(0, 0%, 100%, 0.082);
+      }
+      .Header__bottomBtn--active {
+        color: white;
+        font-weight: 700;
+      }
+    }
+  }
+  .Header__TweetForm {
+    display: flex;
+    align-items: start;
+    gap: 1em;
+    padding: 1em;
+    border-top: 1px solid colors.$border-gray;
+    .curUserAvatar {
+      height: 2.5em;
+      min-width: 2.5em;
+      border-radius: 200px;
+    }
+    .form__inputField {
+      width: 100%;
+      #form__inputField-id {
+        resize: none;
+        color: white;
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 0.5em 0;
+      }
+      #form__inputField-id:focus {
+        outline: none;
+      }
+      #form__inputField-id::placeholder {
+        font-weight: variables.$fw-s;
+        font-size: 1.1rem;
+      }
+      .image {
+        position: relative;
+      }
+      .removeImageIcon {
+        height: 2em;
+        width: 2em;
+      }
+      .removeImageBtn {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        cursor: pointer;
+      }
+      label {
+        display: inline-block;
+        .uploadImgIcon {
+          color: colors.$btn-blue;
+          cursor: pointer;
+        }
+      }
+      #uploadImg {
+        display: none;
+      }
+    }
+    .form__tweetbtn {
+      .tweetBtn {
+        background-color: colors.$tweetBtn-Dark;
+        color: #808080;
+        border-radius: 1.5em;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        border: none;
+        font-weight: variables.$fw-b;
+      }
+      .tweetBtn-Active {
+        background-color: colors.$tweetBtn;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Header__top {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+}
