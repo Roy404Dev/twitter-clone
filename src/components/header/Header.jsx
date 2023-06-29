@@ -52,7 +52,7 @@ const Header = () => {
             <div className="image">
               <button className="removeImageBtn" onClick={() => setImage(null)}>
                 <img
-                  src="src/assets/removeIcon.svg"
+                  src="/assets/removeIcon.svg"
                   alt=""
                   className="removeImageIcon"
                 />

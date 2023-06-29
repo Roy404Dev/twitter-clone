@@ -7,7 +7,6 @@ import { FaRegComment, FaRetweet } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Modal from "../Modal";
 const Tweet = ({ tweet }) => {
-  console.log(tweet);
   const { handleLike, handleRetweet, deleteTweet, handleShowComment } =
     useContext(DataContext);
   const { id, user, text, image, timestamp, comments, retweets, likes, views } =
