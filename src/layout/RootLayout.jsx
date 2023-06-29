@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import SideBar from "../components/sideBar/SideBar";
+import SideBar from "../components/Sidebar/SideBar";
 import Trends from "../components/Trends/Trends";
 import { Outlet } from "react-router-dom";
 import DataContext from "../context/DataContext";
