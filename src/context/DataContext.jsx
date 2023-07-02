@@ -16,7 +16,7 @@ export const DataProvider = ({ children }) => {
   useEffect(() => {
     const getCurrentUser = async () => {
       try {
-        const response = await axios.get("/data/currentUser.json");
+        const response = await axios.get("data/currentUser.json");
         setCurrentUser(response.data.currentUser);
       } catch (err) {
         console.log('error' + err);

@@ -5,7 +5,6 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BiDotsHorizontalRounded, } from "react-icons/bi";  //BiBarChart //
 import { FaRegComment, FaRetweet } from "react-icons/fa";
 import { FiBookmark } from "react-icons/fi";
-// import { Link } from "react-router-dom";
 import "./FullTweet.scss";
 import Modal from "../Modal";
 import { RxImage } from "react-icons/rx";
