@@ -13,10 +13,10 @@ import RootLayout from "./layout/RootLayout";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<RootLayout />}>
+      <Route path="/twitter-clone/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="/:name/status/:id" element={<TweetPage />} />
+        <Route path="status/:id" element={<TweetPage />} />
         <Route path="Explore" element={<Home />} />
         <Route path="notifications" element={<Home />} />
         <Route path="messages" element={<Home />} />
@@ -33,5 +33,6 @@ function App() {
     </DataProvider>
   );
 }
+
 
 export default App;
