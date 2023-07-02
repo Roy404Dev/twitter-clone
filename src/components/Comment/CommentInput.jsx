@@ -115,7 +115,7 @@ const CommentInput = ({id}) => {
                       onClick={() => setReplyImage(null)}
                     >
                       <img
-                        src="src/assets/removeIcon.svg"
+                        src="./assets/removeIcon.svg"
                         alt=""
                         className="removeImageIcon"
                       />

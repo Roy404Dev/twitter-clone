@@ -196,7 +196,7 @@ const FullTweet = ({ tweet }) => {
                       onClick={() => setReplyImage(null)}
                     >
                       <img
-                        src="/assets/removeIcon.svg"
+                        src="./assets/removeIcon.svg"
                         alt=""
                         className="removeImageIcon"
                       />
