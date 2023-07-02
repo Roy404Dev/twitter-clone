@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import DataContext from "../../context/DataContext";
 import { MdVerified, MdIosShare } from "react-icons/md";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";

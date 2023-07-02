@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import DataContext from "../../context/DataContext";
 import { RxImage } from "react-icons/rx";
 const Header = () => {

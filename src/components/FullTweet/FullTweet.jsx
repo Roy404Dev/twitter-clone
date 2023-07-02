@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import DataContext from "../../context/DataContext";
 import { MdVerified, MdIosShare } from "react-icons/md";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { BiDotsHorizontalRounded, BiBarChart } from "react-icons/bi";
+import { BiDotsHorizontalRounded, } from "react-icons/bi";  //BiBarChart //
 import { FaRegComment, FaRetweet } from "react-icons/fa";
 import { FiBookmark } from "react-icons/fi";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./FullTweet.scss";
 import Modal from "../Modal";
 import { RxImage } from "react-icons/rx";
@@ -27,16 +27,16 @@ const FullTweet = ({ tweet }) => {
     user,
     text,
     image,
-    timestamp,
+    // timestamp,
     comments,
     retweets,
     likes,
-    views,
+    // views,
     quotes,
     bookmarks,
   } = tweet;
   const [liked, setLiked] = useState(false);
-  const [bookmark, setBookmark] = useState([]);
+  // const [bookmark, setBookmark] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const f = Intl.DateTimeFormat("en-us", {
     month: "short",

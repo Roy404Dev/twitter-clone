@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import Tweet from "../../components/Tweet/Tweet";
 import DataContext from "../../context/DataContext";
 import { Link, useParams } from "react-router-dom";
 import FullTweet from "../../components/FullTweet/FullTweet";

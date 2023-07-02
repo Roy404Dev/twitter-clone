@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import DataContext from "../../context/DataContext";
 import { AiOutlineClose } from "react-icons/ai";
 import { RxImage } from "react-icons/rx";

@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext } from "react";
 import DataContext from "../../context/DataContext";
 import Tweet from "../Tweet/Tweet";
 import CommentInput from "../Comment/CommentInput";
